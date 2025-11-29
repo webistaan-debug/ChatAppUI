@@ -64,7 +64,14 @@ class _OnboardingscreenState extends State<Onboardingscreen> {
             itemBuilder: (context, index) {
               return Column(
                 children: [
-                  Image.asset(onboardingimages[index]['image']),
+                  Container(
+                    width: double.infinity,
+                    height: 400,
+                    child: Image.asset(
+                      onboardingimages[index]['image'],
+                      fit: BoxFit.cover,
+                    ),
+                  ),
                   Text(
                     onboardingimages[index]['title'],
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
