@@ -1,4 +1,5 @@
-import 'package:chatapp/contactscreen.dart';
+// import 'package:chatapp/contactscreen.dart';
+import 'package:chatapp/onboardingscreen.dart';
 import 'package:flutter/material.dart';
 
 class Splashscreen extends StatefulWidget {
@@ -15,7 +16,7 @@ class _SplashscreenState extends State<Splashscreen> {
     Future.delayed(Duration(seconds: 5), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => Contactscreen()),
+        MaterialPageRoute(builder: (context) => Onboardingscreen()),
       );
     });
   }
@@ -38,6 +39,7 @@ class _SplashscreenState extends State<Splashscreen> {
               color: Colors.white,
             ),
           ),
+          Row(),
         ],
       ),
     );
